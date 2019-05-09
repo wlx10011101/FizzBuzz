@@ -14,7 +14,16 @@ class TestFizz3AndBuzz5(unittest.TestCase):
         self.student = Student(3, 5)
 
     def testIndexOfSequence1Expect1(self):
-        assert(self.student.game(1) == "1")
+        gameResult = self.student.game(1)
+        expectResult = "1"
+        assert gameResult == expectResult, "expect: " + \
+            expectResult + " , But get: " + gameResult
+
+    def testIndexOfSequence3ExpectFizz(self):
+        gameResult = self.student.game(3)
+        expectResult = "Fizz"
+        assert gameResult == expectResult, "expect: " + \
+            expectResult + " , But get: " + gameResult
 
 
 if __name__ == "__main__":

@@ -4,6 +4,7 @@ Created on 20190508
 
 @author: linkswei
 '''
+from src.FizzBuzzGame import FizzBuzzGame
 
 
 class Student(object):
@@ -15,19 +16,18 @@ class Student(object):
         '''
         Constructor
         '''
-        self.fizzNum = fizzNum
-        self.buzzNum = buzzNum
+        self.gameRuler = FizzBuzzGame(fizzNum, buzzNum)
 
-    def game(self, indexOfSequence):
+    def game(self, num):
         result = ""
-        if indexOfSequence % self.fizzNum == 0:
+        if self.gameRuler.isFizzBuzz(num):
+            result += "FizzBuzz"
+            return result
+        if self.gameRuler.isFizz(num):
             result += "Fizz"
-        if indexOfSequence % self.buzzNum == 0:
-            result += "Buzz"
-        if str(self.fizzNum) in str(indexOfSequence):
-            result += "Fizz"
-        if str(self.buzzNum) in str(indexOfSequence):
+        if self.gameRuler.isBuzz(num):
             result += "Buzz"
         if result == "":
-            result = str(indexOfSequence)
-        return result
+            return str(num)
+        else:
+            return result
