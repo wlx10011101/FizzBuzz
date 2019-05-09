@@ -9,7 +9,7 @@ import unittest
 from src.Student import Student
 
 
-class Test(unittest.TestCase):
+class TestFizz2AndBuzz4(unittest.TestCase):
 
     def setUp(self):
         self.student = Student(2, 4)
