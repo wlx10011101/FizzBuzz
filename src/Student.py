@@ -20,6 +20,8 @@ class Student(object):
 
     def game(self, num):
         result = ""
+        if num < 1:
+            return result
         if self.gameRuler.isFizzBuzz(num):
             result += "FizzBuzz"
             return result

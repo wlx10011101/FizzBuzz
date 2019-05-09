@@ -2,4 +2,5 @@ eclipse.preferences.version=1
 encoding//src/FizzBuzzGame.py=utf-8
 encoding//src/Main.py=utf-8
 encoding//src/Student.py=utf-8
+encoding//testcase/TestFizz2AndBuzz4.py=utf-8
 encoding//testcase/TestFizz3AndBuzz5.py=utf-8

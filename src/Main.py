@@ -4,11 +4,14 @@ Created on 20190508
 
 @author: linkswei
 '''
+from src.Student import Student
 
 
 def FizzAndBuzz(FizzNum, BuzzNum):
-    pass
+    student = Student(FizzNum, BuzzNum)
+    for i in range(100):
+        print student.game(i)
 
 
 if __name__ == "__main__":
-    FizzAndBuzz()
+    FizzAndBuzz(3, 5)
